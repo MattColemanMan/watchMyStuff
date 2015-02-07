@@ -11,11 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207071712) do
+ActiveRecord::Schema.define(version: 20150207100739) do
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "watches", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "watcher_id"
+    t.decimal  "lat"
+    t.decimal  "lng"
+    t.string   "location_description"
+    t.string   "location_picture"
+    t.integer  "requested_minutes"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.boolean  "watcher_ready"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

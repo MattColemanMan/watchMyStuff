@@ -4240,3 +4240,60 @@ I, [2015-02-07T04:35:15.709741 #889]  INFO -- : Processing by HomeController#ind
 I, [2015-02-07T04:35:15.735024 #889]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.7ms)
 I, [2015-02-07T04:35:15.738042 #889]  INFO -- : Completed 200 OK in 28ms (Views: 9.8ms | ActiveRecord: 0.0ms)
 I, [2015-02-07T04:35:16.015215 #886]  INFO -- : Started GET "/assets/rails.png" for 204.9.220.50 at 2015-02-07 04:35:16 +0000
+I, [2015-02-07T22:22:20.106721 #2925]  INFO -- : Migrating to CreateUsers (20150207071712)
+I, [2015-02-07T22:22:20.122408 #2925]  INFO -- : Migrating to CreateWatches (20150207100739)
+I, [2015-02-07T22:39:52.038594 #3107]  INFO -- : Started GET "/users" for 204.9.220.50 at 2015-02-07 22:39:52 +0000
+I, [2015-02-07T22:39:52.047253 #3107]  INFO -- : Processing by UsersController#index as HTML
+I, [2015-02-07T22:39:52.061419 #3107]  INFO -- :   Rendered users/index.html.erb within layouts/application (2.6ms)
+I, [2015-02-07T22:39:52.063033 #3107]  INFO -- : Completed 200 OK in 16ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+I, [2015-02-07T22:39:54.341305 #3102]  INFO -- : Started GET "/users/new" for 204.9.220.50 at 2015-02-07 22:39:54 +0000
+I, [2015-02-07T22:39:54.350431 #3102]  INFO -- : Processing by UsersController#new as HTML
+I, [2015-02-07T22:39:54.383955 #3102]  INFO -- :   Rendered users/_form.html.erb (18.3ms)
+I, [2015-02-07T22:39:54.384401 #3102]  INFO -- :   Rendered users/new.html.erb within layouts/application (20.1ms)
+I, [2015-02-07T22:39:54.386053 #3102]  INFO -- : Completed 200 OK in 35ms (Views: 23.7ms | ActiveRecord: 1.0ms)
+I, [2015-02-07T22:39:58.711185 #3107]  INFO -- : Started POST "/users" for 204.9.220.50 at 2015-02-07 22:39:58 +0000
+I, [2015-02-07T22:39:58.713573 #3107]  INFO -- : Processing by UsersController#create as HTML
+I, [2015-02-07T22:39:58.713673 #3107]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"A7xBxFBUaMlnJbDnynEshKFkP5UGgpfS+I4Xdk4Wkmg=", "user"=>{"name"=>"Eduardo", "rating"=>"1"}, "commit"=>"Create User"}
+I, [2015-02-07T22:39:58.768644 #3107]  INFO -- : Redirected to http://104.131.121.221/users/1
+I, [2015-02-07T22:39:58.769385 #3107]  INFO -- : Completed 302 Found in 56ms (ActiveRecord: 35.4ms)
+I, [2015-02-07T22:39:58.810467 #3104]  INFO -- : Started GET "/users/1" for 204.9.220.50 at 2015-02-07 22:39:58 +0000
+I, [2015-02-07T22:39:58.829310 #3104]  INFO -- : Processing by UsersController#show as HTML
+I, [2015-02-07T22:39:58.829493 #3104]  INFO -- :   Parameters: {"id"=>"1"}
+I, [2015-02-07T22:39:58.861172 #3104]  INFO -- :   Rendered users/show.html.erb within layouts/application (2.2ms)
+I, [2015-02-07T22:39:58.863114 #3104]  INFO -- : Completed 200 OK in 33ms (Views: 7.2ms | ActiveRecord: 1.8ms)
+I, [2015-02-07T22:40:02.925239 #3107]  INFO -- : Started GET "/users" for 204.9.220.50 at 2015-02-07 22:40:02 +0000
+I, [2015-02-07T22:40:02.928567 #3107]  INFO -- : Processing by UsersController#index as HTML
+I, [2015-02-07T22:40:02.936505 #3107]  INFO -- :   Rendered users/index.html.erb within layouts/application (4.4ms)
+I, [2015-02-07T22:40:02.937913 #3107]  INFO -- : Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+I, [2015-02-07T22:40:11.712213 #3104]  INFO -- : Started GET "/watches" for 204.9.220.50 at 2015-02-07 22:40:11 +0000
+I, [2015-02-07T22:40:11.714961 #3104]  INFO -- : Processing by WatchesController#index as HTML
+I, [2015-02-07T22:40:11.720373 #3104]  INFO -- :   Rendered watches/index.html.erb within layouts/application (1.9ms)
+I, [2015-02-07T22:40:11.721226 #3104]  INFO -- : Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+I, [2015-02-07T22:40:13.596654 #3107]  INFO -- : Started GET "/watches/new" for 204.9.220.50 at 2015-02-07 22:40:13 +0000
+I, [2015-02-07T22:40:13.600087 #3107]  INFO -- : Processing by WatchesController#new as HTML
+I, [2015-02-07T22:40:13.674692 #3107]  INFO -- :   Rendered watches/_form.html.erb (66.3ms)
+I, [2015-02-07T22:40:13.675057 #3107]  INFO -- :   Rendered watches/new.html.erb within layouts/application (68.3ms)
+I, [2015-02-07T22:40:13.675918 #3107]  INFO -- : Completed 200 OK in 76ms (Views: 71.0ms | ActiveRecord: 0.7ms)
+I, [2015-02-07T22:43:49.178465 #3104]  INFO -- : Started POST "/watches" for 204.9.220.50 at 2015-02-07 22:43:49 +0000
+I, [2015-02-07T22:43:49.182076 #3104]  INFO -- : Processing by WatchesController#create as HTML
+I, [2015-02-07T22:43:49.182286 #3104]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"A7xBxFBUaMlnJbDnynEshKFkP5UGgpfS+I4Xdk4Wkmg=", "watch"=>{"user_id"=>"1", "watcher_id"=>"", "lat"=>"23", "lng"=>"34", "location_description"=>"HERE", "location_picture"=>"link", "requested_minutes(1i)"=>"2015", "requested_minutes(2i)"=>"2", "requested_minutes(3i)"=>"7", "requested_minutes(4i)"=>"22", "requested_minutes(5i)"=>"40", "start_time(1i)"=>"2015", "start_time(2i)"=>"2", "start_time(3i)"=>"7", "start_time(4i)"=>"22", "start_time(5i)"=>"40", "end_time(1i)"=>"2015", "end_time(2i)"=>"2", "end_time(3i)"=>"7", "end_time(4i)"=>"23", "end_time(5i)"=>"40", "status"=>""}, "commit"=>"Create Watch"}
+I, [2015-02-07T22:43:49.202115 #3104]  INFO -- : Completed 500 Internal Server Error in 20ms
+F, [2015-02-07T22:43:49.203695 #3104] FATAL -- : 
+ActiveRecord::MultiparameterAssignmentErrors (1 error(s) on assignment of multiparameter attributes [error on assignment [2015, 2, 7, 22, 40] to requested_minutes (undefined method `new' for Fixnum:Class)]):
+  app/controllers/watches_controller.rb:33:in `create'
+
+
+I, [2015-02-07T23:06:02.742562 #3099]  INFO -- : Started GET "/watches" for 204.9.220.50 at 2015-02-07 23:06:02 +0000
+I, [2015-02-07T23:06:02.761366 #3099]  INFO -- : Processing by WatchesController#index as HTML
+I, [2015-02-07T23:06:02.802076 #3099]  INFO -- :   Rendered watches/index.html.erb within layouts/application (26.4ms)
+I, [2015-02-07T23:06:02.804294 #3099]  INFO -- : Completed 200 OK in 43ms (Views: 30.4ms | ActiveRecord: 1.4ms)
+I, [2015-02-07T23:06:19.357112 #3102]  INFO -- : Started GET "/watches.json" for 204.9.220.50 at 2015-02-07 23:06:19 +0000
+I, [2015-02-07T23:06:19.366823 #3102]  INFO -- : Processing by WatchesController#index as JSON
+I, [2015-02-07T23:06:19.403703 #3102]  INFO -- :   Rendered watches/index.json.jbuilder (27.4ms)
+I, [2015-02-07T23:06:19.404344 #3102]  INFO -- : Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 1.5ms)
+I, [2015-02-07T23:06:30.627593 #3107]  INFO -- : Started GET "/watches/unfulfilled" for 204.9.220.50 at 2015-02-07 23:06:30 +0000
+I, [2015-02-07T23:06:30.632122 #3107]  INFO -- : Processing by WatchesController#unfulfilled as HTML
+I, [2015-02-07T23:06:30.638315 #3107]  INFO -- : Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+I, [2015-02-07T23:07:33.915963 #3104]  INFO -- : Started GET "/watches/unfulfilled" for 204.9.220.50 at 2015-02-07 23:07:33 +0000
+I, [2015-02-07T23:07:33.919697 #3104]  INFO -- : Processing by WatchesController#unfulfilled as HTML
+I, [2015-02-07T23:07:33.929816 #3104]  INFO -- : Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.9ms)
