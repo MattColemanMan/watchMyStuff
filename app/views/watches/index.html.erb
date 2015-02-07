@@ -1,0 +1,45 @@
+<h1>Listing watches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Watcher</th>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th>Location description</th>
+      <th>Location picture</th>
+      <th>Requested lot</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @watches.each do |watch| %>
+      <tr>
+        <td><%= watch.user_id %></td>
+        <td><%= watch.watcher_id %></td>
+        <td><%= watch.lat %></td>
+        <td><%= watch.lng %></td>
+        <td><%= watch.location_description %></td>
+        <td><%= watch.location_picture %></td>
+        <td><%= watch.requested_minutes %></td>
+        <td><%= watch.start_time %></td>
+        <td><%= watch.end_time %></td>
+        <td><%= watch.status %></td>
+        <td><%= link_to 'Show', watch %></td>
+        <td><%= link_to 'Edit', edit_watch_path(watch) %></td>
+        <td><%= link_to 'Destroy', watch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Watch', new_watch_path %>

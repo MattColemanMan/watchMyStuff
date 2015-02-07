@@ -21,6 +21,12 @@ class UsersController < ApplicationController
   def edit
   end
 
+  # GET /users/1/watches
+  def watches
+    @watches = Watch.where(user_id: params[:id])
+    render json: @watches, status: :ok
+  end
+
   # POST /users
   # POST /users.json
   def create
