@@ -21,6 +21,12 @@ class WatchesController < ApplicationController
   def edit
   end
 
+  # GET /watches/unfulfilled
+  def unfulfilled
+    @watches = Watch.where(status:"Unfulfilled Watch")
+    render json: @watches, status: :ok
+  end
+
   # POST /watches
   # POST /watches.json
   def create

@@ -1,7 +1,11 @@
 Myapp::Application.routes.draw do
-  resources :watches
+  resources :watches do
+    get 'unfulfilled', :on => :collection
+  end
 
-  resources :users
+  resources :users do
+    get 'watches', :on => :member
+  end
 
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
