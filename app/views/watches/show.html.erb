@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @watch.user_id %>
+</p>
+
+<p>
+  <strong>Watcher:</strong>
+  <%= @watch.watcher_id %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @watch.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @watch.lng %>
+</p>
+
+<p>
+  <strong>Location description:</strong>
+  <%= @watch.location_description %>
+</p>
+
+<p>
+  <strong>Location picture:</strong>
+  <%= @watch.location_picture %>
+</p>
+
+<p>
+  <strong>Requested lot:</strong>
+  <%= @watch.requested_minutes %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @watch.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @watch.end_time %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @watch.status %>
+</p>
+
+<%= link_to 'Edit', edit_watch_path(@watch) %> |
+<%= link_to 'Back', watches_path %>

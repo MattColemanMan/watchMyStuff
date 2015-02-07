@@ -1,4 +1,6 @@
 Myapp::Application.routes.draw do
+  resources :watches
+
   resources :users
 
   get "home/index"

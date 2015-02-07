@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  watcher_id: 1
+  lat: 1
+  lng: 1
+  location_description: MyString
+  location_picture: MyString
+  requested_minutes: 2015-02-07 05:07:39
+  start_time: 2015-02-07 05:07:39
+  end_time: 2015-02-07 05:07:39
+  status: MyString
+
+two:
+  user_id: 1
+  watcher_id: 1
+  lat: 1
+  lng: 1
+  location_description: MyString
+  location_picture: MyString
+  requested_minutes: 2015-02-07 05:07:39
+  start_time: 2015-02-07 05:07:39
+  end_time: 2015-02-07 05:07:39
+  status: MyString

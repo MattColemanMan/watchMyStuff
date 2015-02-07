@@ -1,0 +1,57 @@
+<%= form_for(@watch) do |f| %>
+  <% if @watch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@watch.errors.count, "error") %> prohibited this watch from being saved:</h2>
+
+      <ul>
+      <% @watch.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :watcher_id %><br>
+    <%= f.number_field :watcher_id %>
+  </div>
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.number_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lng %><br>
+    <%= f.number_field :lng %>
+  </div>
+  <div class="field">
+    <%= f.label :location_description %><br>
+    <%= f.text_field :location_description %>
+  </div>
+  <div class="field">
+    <%= f.label :location_picture %><br>
+    <%= f.text_field :location_picture %>
+  </div>
+  <div class="field">
+    <%= f.label :requested_minutes %><br>
+    <%= f.time_select :requested_minutes %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
