@@ -1,4 +1,5 @@
 class WatchesController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   before_action :set_watch, only: [:show, :edit, :update, :destroy]
 
   # GET /watches
@@ -75,6 +76,8 @@ class WatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def watch_params
-      params.require(:watch).permit(:user_id, :watcher_id, :lat, :lng, :location_description, :location_picture, :requested_minutes, :start_time, :end_time, :status)
+      params.permit(:user_id, :user_name, :watcher_id, :watcher_name, :lat, :lng, :location_description, :location_picture, 
+		    :requested_minutes, :start_time, :end_time, :status)
     end
 end
+
