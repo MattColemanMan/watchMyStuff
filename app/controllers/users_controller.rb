@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -59,10 +60,11 @@ class UsersController < ApplicationController
 
   # POST /users/find_by_name
   def find_by_name
-    if(found = User.find_by(name:params[:name]))
+    if(found = User.find_by(name: params[:name]))
       render json: found, status: :ok
     else
-      created = User.new(name:params[:name], rating: 4).save!
+      created = User.new(name: params[:name], rating: 4)
+      created.save
       render json: created, status: :ok
     end
   end

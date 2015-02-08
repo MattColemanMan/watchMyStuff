@@ -5,7 +5,7 @@ Myapp::Application.routes.draw do
 
   resources :users do
     get 'watches', :on => :member
-    get 'find_by_name', :on => :collection
+    post 'find_by_name', :on => :collection
   end
 
   get "home/index"
