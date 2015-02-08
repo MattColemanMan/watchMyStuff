@@ -57,6 +57,16 @@ class UsersController < ApplicationController
     end
   end
 
+  # POST /users/find_by_name
+  def find_by_name
+    if(found = User.find_by(name:params[:name]))
+      render json: found, status: :ok
+    else
+      created = User.new(name:params[:name], rating: 4).save!
+      render json: created, status: :ok
+    end
+  end
+
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
